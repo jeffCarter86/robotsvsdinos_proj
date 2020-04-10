@@ -35,26 +35,36 @@ namespace dinovsrobot
         }
         //member methods (what this class does)
 
-        public void ChoseAttack()
+        public void DisplayDinosaur()
         {
-            Console.Write($"Chose an attack(Chomp | Kick | Tail Whip |) for {type}: ");
-            string choice = Console.ReadLine().ToLower();
-            while (choice != "chomp" && choice != "kick" && choice != "tail whip")
+            string space = "      ";
+            if (type != "T-rex")
             {
-                Console.WriteLine("Invaid weapon selection!!");
-                choice = Console.ReadLine().ToLower();
+                space = "";
             }
-            switch (choice)
+            Console.WriteLine($"|{space}{type}  |  {health}   |  {energyLevel}    |   {canAttack}      |");
+            
+             void ChoseAttack()
             {
-                case "chomp":
-                    attack = attackList.chomp;
-                    break;
-                case "kick":
-                    attack = attackList.kick;
-                    break;
-                case "tail whip":
-                    attack = attackList.tailwhip;
-                    break;
+                Console.Write($"Chose an attack(Chomp | Kick | Tail Whip |) for {type}: ");
+                string choice = Console.ReadLine().ToLower();
+                while (choice != "chomp" && choice != "kick" && choice != "tail whip")
+                {
+                    Console.WriteLine("Invaid weapon selection!!");
+                    choice = Console.ReadLine().ToLower();
+                }
+                switch (choice)
+                {
+                    case "chomp":
+                        attack = attackList.chomp;
+                        break;
+                    case "kick":
+                        attack = attackList.kick;
+                        break;
+                    case "tail whip":
+                        attack = attackList.tailwhip;
+                        break;
+                }
             }
         }
-}
+    } }

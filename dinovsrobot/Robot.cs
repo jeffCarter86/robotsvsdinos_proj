@@ -9,9 +9,9 @@ namespace dinovsrobot
     class Robot
     { //member varribles
         public string name;
-        public double health;           
-        public double powerLevel;      
-        public Weapon weapon;      
+        public double health;
+        public double powerLevel;
+        public Weapon weapon;
         public double attackPower;
         public double attackModifier;
         public bool canAttack;
@@ -31,6 +31,16 @@ namespace dinovsrobot
         }
 
         //member methods can do
+
+        public void DisplayRobot()
+        {
+            string space = "";
+            if (name != "Cyberman")
+            {
+                space = "   ";
+            }
+            Console.WriteLine($"|{space}{name}  |  {health}   |  {powerLevel}    |   {canAttack}      |");
+        }
         Weapon ChoseWeapon()
         {
             Console.Write($"Chose a weapon(Plunger | Cannon | Particle Blaster |) for {name}: ");
@@ -52,6 +62,7 @@ namespace dinovsrobot
                     return armory.blaster;
             }
 
-            
+
         }
+    }
 }
