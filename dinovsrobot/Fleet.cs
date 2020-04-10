@@ -8,5 +8,8 @@ namespace dinovsrobot
 {
     class Fleet
     {
+        //member variables (what this class has)
+        //constructor(Spawner)
+        //member methods (what this class does)
     }
 }
