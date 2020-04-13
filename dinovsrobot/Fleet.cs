@@ -8,14 +8,14 @@ namespace dinovsrobot
 {
     class Fleet
     {
-        public Robot hank;
+        public Robot robbie;
         public Robot dalek;
         public Robot cyberman;
 
         public Fleet()
         {
-            hank = new Robot(" Hank");
-            Console.WriteLine($"Robot: {hank.name} chose a {hank.weapon.type} and has attack power of {hank.attackPower}");
+            robbie = new Robot(" Robbie");
+            Console.WriteLine($"Robot: {robbie.name} chose a {robbie.weapon.type} and has attack power of {robbie.attackPower}");
             dalek = new Robot("Dalek");
             Console.WriteLine($"Robot: {dalek.name} chose a {dalek.weapon.type} and has attack power of {dalek.attackPower}");
             cyberman = new Robot("Cyberman");

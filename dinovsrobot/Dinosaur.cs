@@ -42,15 +42,15 @@ namespace dinovsrobot
             {
                 space = "";
             }
-            Console.WriteLine($"|{space}{type}  |  {health}   |  {energyLevel}    |   {canAttack}      |");
+            Console.WriteLine($"|{space}{type}  -  {health}   -  {energyLevel}    -   {canAttack}      |");
             
-             void ChoseAttack()
+             void ChooseAttack()
             {
-                Console.Write($"Chose an attack(Chomp | Kick | Tail Whip |) for {type}: ");
+                Console.Write($"Choose an attack(Chomp - Kick - Tail Whip |) for {type}: ");
                 string choice = Console.ReadLine().ToLower();
                 while (choice != "chomp" && choice != "kick" && choice != "tail whip")
                 {
-                    Console.WriteLine("Invaid weapon selection!!");
+                    Console.WriteLine("Invaid attack selection!!");
                     choice = Console.ReadLine().ToLower();
                 }
                 switch (choice)

@@ -39,11 +39,11 @@ namespace dinovsrobot
             {
                 space = "   ";
             }
-            Console.WriteLine($"|{space}{name}  |  {health}   |  {powerLevel}    |   {canAttack}      |");
+            Console.WriteLine($"|{space}{name}  -  {health}   -  {powerLevel}    -   {canAttack}      |");
         }
         Weapon ChoseWeapon()
         {
-            Console.Write($"Chose a weapon(Plunger | Cannon | Particle Blaster |) for {name}: ");
+            Console.Write($"Chose a weapon(Plunger - Cannon - Particle Blaster |) for {name}: ");
             string choice = Console.ReadLine().ToLower();
             while (choice != "plunger" && choice != "cannon" && choice != "particle blaster")
             {
