@@ -39,7 +39,7 @@ namespace dinovsrobot
             {
                 space = "   ";
             }
-            Console.WriteLine($"|{space}{name}  -  {health}   -  {powerLevel}    -   {canAttack}      |");
+            Console.WriteLine($"{space}{name}  -  {health}   -  {powerLevel}    -   {canAttack}      ");
         }
         Weapon ChoseWeapon()
         {

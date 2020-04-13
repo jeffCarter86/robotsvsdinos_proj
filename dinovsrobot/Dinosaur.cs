@@ -8,8 +8,7 @@ namespace dinovsrobot
 {
     class Dinosaur
     {
-        //member variables (what this class has)
-
+        //public string name;
         public string type;
         public double health;
         public double energyLevel;
@@ -18,8 +17,6 @@ namespace dinovsrobot
         public double attackPower;
         public AttackList attackList;
         public Attack attack;
-
-        //constructor(Spawner)
 
         public Dinosaur(string type)
         {
@@ -33,38 +30,40 @@ namespace dinovsrobot
             attackPower = this.attackModifier + this.energyLevel;
 
         }
-        //member methods (what this class does)
-
         public void DisplayDinosaur()
         {
-            string space = "      ";
-            if (type != "T-rex")
+           
+             {
+            string space = "";
+            if (type != "T-Rex")
             {
-                space = "";
+                space = "   ";
             }
-            Console.WriteLine($"|{space}{type}  -  {health}   -  {energyLevel}    -   {canAttack}      |");
-            
-             void ChooseAttack()
+            Console.WriteLine($"{space}{type}  -  {health}   -  {energyLevel}    -   {canAttack}      ");
+        }
+
+        }
+        public void ChooseAttack()
+        {
+            Console.Write($"Chose an attack(Chomp - Kick - Tail Whip ) for {type}: ");
+            string choice = Console.ReadLine().ToLower();
+            while (choice != "chomp" && choice != "kick" && choice != "tailwhip")
             {
-                Console.Write($"Choose an attack(Chomp - Kick - Tail Whip |) for {type}: ");
-                string choice = Console.ReadLine().ToLower();
-                while (choice != "chomp" && choice != "kick" && choice != "tail whip")
-                {
-                    Console.WriteLine("Invaid attack selection!!");
-                    choice = Console.ReadLine().ToLower();
-                }
-                switch (choice)
-                {
-                    case "chomp":
-                        attack = attackList.chomp;
-                        break;
-                    case "kick":
-                        attack = attackList.kick;
-                        break;
-                    case "tail whip":
-                        attack = attackList.tailwhip;
-                        break;
-                }
+                Console.WriteLine("Invaid weapon selection!!");
+                choice = Console.ReadLine().ToLower();
+            }
+            switch (choice)
+            {
+                case "chomp":
+                    attack = attackList.chomp;
+                    break;
+                case "kick":
+                    attack = attackList.kick;
+                    break;
+                case "tailwhip":
+                    attack = attackList.tailwhip;
+                    break;
             }
         }
-    } }
+        }
+    } 

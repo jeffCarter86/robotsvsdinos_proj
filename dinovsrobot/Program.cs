@@ -10,9 +10,9 @@ namespace dinovsrobot
     {
         static void Main(string[] args)
         {
-            //member variables (what this class has)
-            //constructor(Spawner)
-            //member methods (what this class does)
+            Battlefield battleField = new Battlefield();
+            Console.WriteLine("LETS GET READY TO RUMMBBLLEEE!!!");
+            battleField.Battle();
         }
     }
 }

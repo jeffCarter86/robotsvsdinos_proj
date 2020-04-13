@@ -14,7 +14,7 @@ namespace dinovsrobot
         public Herd()
         {
             tRex = new Dinosaur("T-rex");
-            raptor = new Dinosaur("     Raptor");
+            raptor = new Dinosaur("Raptor");
             triceratops = new Dinosaur("Triceratops");
 
         }
