@@ -21,7 +21,7 @@ namespace dinovsrobot
         public Robot(string name)
         {
             this.name = name;
-            powerLevel = 100;
+            powerLevel = new Random().Next(1, 101); 
             health = 1000;
             armory = new WeaponList();
             weapon = ChoseWeapon();

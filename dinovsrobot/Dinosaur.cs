@@ -20,16 +20,18 @@ namespace dinovsrobot
 
         public Dinosaur(string type)
         {
-            //this.name = name;
+           
             this.type = type;
             attackList = new AttackList();
             health = 1000;
-            energyLevel = 100;
+            energyLevel = new Random().Next(1, 101);
             attackModifier = 10;
             canAttack = true;
             attackPower = this.attackModifier + this.energyLevel;
 
         }
+
+
         public void DisplayDinosaur()
         {
            

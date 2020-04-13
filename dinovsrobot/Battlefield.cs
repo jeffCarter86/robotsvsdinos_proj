@@ -8,13 +8,12 @@ namespace dinovsrobot
 {
     class Battlefield
     {
-        //member variables (what this class has)
+      
         public Fleet robotFleet;
         public Herd dinosaurHerd;
         List<Robot> robotList;
         List<Dinosaur> dinoList;
-        //constructor(Spawner)
-
+      
         public Battlefield()
         {
             robotFleet = new Fleet();
@@ -47,7 +46,7 @@ namespace dinovsrobot
 
         public void Attack()
         {
-            //dinos attack each robot
+            // dino attack
             for (int i = 0; i < dinoList.Count; i++)
             {
                 if (i < robotList.Count)
@@ -56,7 +55,7 @@ namespace dinovsrobot
                     robotList[i].health -= dinoList[i].attackPower;
                 }
             }
-            //update robot list
+            //update damage to robots
             for (int i = 0; i < robotList.Count; i++)
             {
                 if (robotList[i].health <= 0)
@@ -66,7 +65,7 @@ namespace dinovsrobot
                 }
 
             }
-            //robots attack each dino
+            //robots attack
             for (int i = 0; i < robotList.Count; i++)
             {
                 if (i < dinoList.Count)
@@ -75,7 +74,7 @@ namespace dinovsrobot
                     dinoList[i].health -= robotList[i].attackPower;
                 }
             }
-            // update dino
+            // update damage to dinos
             for (int i = 0; i < dinoList.Count; i++)
             {
                 if (dinoList[i].health <= 0)

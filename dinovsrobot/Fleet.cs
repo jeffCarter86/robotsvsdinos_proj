@@ -14,7 +14,7 @@ namespace dinovsrobot
 
         public Fleet()
         {
-            robbie = new Robot(" Robbie");
+            robbie = new Robot("Robbie");
             Console.WriteLine($"Robot: {robbie.name} chose a {robbie.weapon.type} and has attack power of {robbie.attackPower}");
             dalek = new Robot("Dalek");
             Console.WriteLine($"Robot: {dalek.name} chose a {dalek.weapon.type} and has attack power of {dalek.attackPower}");
