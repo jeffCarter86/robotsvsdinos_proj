@@ -13,9 +13,9 @@ namespace dinovsrobot
         public Attack tailwhip;
         public AttackList()
         {
-            chomp = new Attack("chomp", 10);
-            kick = new Attack("kick", 15);
-            tailwhip = new Attack("tail whip", 25);
+            chomp = new Attack("chomp", new Random().Next(1, 11));
+            kick = new Attack("kick", new Random().Next(1, 16));
+            tailwhip = new Attack("tail whip", new Random().Next(1, 26));
         }
     }
 }

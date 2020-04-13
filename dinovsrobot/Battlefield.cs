@@ -91,7 +91,7 @@ namespace dinovsrobot
 
             int i = 0;
             
-            Console.WriteLine("Robot  -  Health -  Power  -  Can Attack  ");
+            Console.WriteLine("Robot  -  Health -  Energy  -  Can Attack  ");
            
             foreach (Robot bot in robotList)
             {

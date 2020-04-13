@@ -49,7 +49,7 @@ namespace dinovsrobot
         {
             Console.Write($"Chose an attack(Chomp - Kick - Tail Whip ) for {type}: ");
             string choice = Console.ReadLine().ToLower();
-            while (choice != "chomp" && choice != "kick" && choice != "tailwhip")
+            while (choice != "chomp" && choice != "kick" && choice != "tail whip")
             {
                 Console.WriteLine("Invaid weapon selection!!");
                 choice = Console.ReadLine().ToLower();
@@ -62,7 +62,7 @@ namespace dinovsrobot
                 case "kick":
                     attack = attackList.kick;
                     break;
-                case "tailwhip":
+                case "tail whip":
                     attack = attackList.tailwhip;
                     break;
             }

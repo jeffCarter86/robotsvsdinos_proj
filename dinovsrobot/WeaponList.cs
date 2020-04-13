@@ -13,9 +13,9 @@ namespace dinovsrobot
         public Weapon blaster;
         public WeaponList()
         {
-            plunger = new Weapon("Plunger", 10);
-            cannon = new Weapon("Cannon", 15);
-            blaster = new Weapon("Particle Blaster", 25);
+            plunger = new Weapon("Plunger", new Random().Next(1, 11));
+            cannon = new Weapon("Cannon", new Random().Next(1, 16));
+            blaster = new Weapon("Particle Blaster", new Random().Next(1, 26));
 
         }
     }
